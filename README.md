@@ -13,5 +13,5 @@ This is a simple Flask web application that allows users to enter an Instagram u
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/nannapravalika/miracle me.git
-   cd miracle me
+   git clone https://github.com/nannapravalika/miracle-me.git
+   cd miracle-me
