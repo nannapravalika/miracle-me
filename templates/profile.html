@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ username }}'s Profile</title>
+</head>
+<body>
+    <h1>{{ username }}'s Profile</h1>
+
+    <h2>Instagram Posts</h2>
+    <form action="/save_images" method="post">
+        <input type="hidden" name="username" value="{{ username }}">
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <img src="{{ post['media_url'] }}" alt="Post Image">
+                    <label>
+                        <input type="checkbox" name="selected_images" value="{{ post['media_url'] }}">
+                        Select
+                    </label>
+                </li>
+            {% endfor %}
+        </ul>
+        <button type="submit">Save Selected Images</button>
+    </form>
+</body>
+</html>
